@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/expressmakers/expressmakers-php.svg?branch=master)](https://travis-ci.org/expressmakers/expressmakers-php)
-[![StyleCI](https://github.styleci.io/repos/197049199/shield?branch=master)](https://github.styleci.io/repos/197049199)
+[![StyleCI](https://github.styleci.io/repos/242940837/shield?branch=master)](https://github.styleci.io/repos/242940837)
 <a href="https://packagist.org/packages/expressmakers/expressmakers-php"><img src="https://poser.pugx.org/expressmakers/expressmakers-php/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/expressmakers/expressmakers-php"><img src="https://poser.pugx.org/expressmakers/expressmakers-php/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/expressmakers/expressmakers-php"><img src="https://poser.pugx.org/expressmakers/expressmakers-php/license.svg" alt="License"></a>
