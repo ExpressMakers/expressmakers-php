@@ -6,7 +6,6 @@ namespace ExpressMakers\API\Responses;
  * Class GetTransactionResponse.
  *
  * @author Pezhvak <pezhvak@imvx.org>
- *
  */
 class GetTransactionResponse extends BaseResponse
 {

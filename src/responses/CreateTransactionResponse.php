@@ -24,7 +24,7 @@ class CreateTransactionResponse extends BaseResponse
     }
 
     /**
-     * Get Payment Link
+     * Get Payment Link.
      *
      * get the link that user should redirected into for paying provided amount
      *
