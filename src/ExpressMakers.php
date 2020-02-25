@@ -2,12 +2,12 @@
 
 namespace ExpressMakers\API;
 
+use ExpressMakers\API\Exceptions\TokenNotSetException;
 use ExpressMakers\API\Responses\CreateTransactionResponse;
 use ExpressMakers\API\Responses\GetOrdersResponse;
 use ExpressMakers\API\Responses\GetTransactionResponse;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
-use ExpressMakers\API\Exceptions\TokenNotSetException;
 
 /**
  * Class ExpressMakers.
@@ -25,7 +25,7 @@ class ExpressMakers
     /**
      * ExpressMakers constructor.
      *
-     * @param  string  $token
+     * @param string $token
      *
      * @throws TokenNotSetException
      */
@@ -64,13 +64,13 @@ class ExpressMakers
     /**
      * Call API Endpoint.
      *
-     * @param  string  $method
-     * @param  string  $endpoint
-     * @param  array|null  $data
+     * @param string     $method
+     * @param string     $endpoint
+     * @param array|null $data
      *
-     * @return mixed
      * @throws TokenNotSetException
      *
+     * @return mixed
      */
     private function _call(string $method, string $endpoint, array $data = null)
     {
@@ -92,14 +92,13 @@ class ExpressMakers
         } catch (ClientException $exception) {
             switch ($exception->getCode()) {
                 case 401:
-                    {
+
                         $this->_throwInvalidTokenException();
-                    }
+
                     break;
                 default:
-                {
+
                     throw $exception;
-                }
             }
         }
 
@@ -107,7 +106,7 @@ class ExpressMakers
     }
 
     /**
-     * Create Transaction
+     * Create Transaction.
      *
      * every time you need to receive an amount from your client using your created order, you should call this
      * endpoint. once transaction is created you should redirect your client to 'payment_link' property returned from
@@ -115,10 +114,10 @@ class ExpressMakers
      *
      * @see https://developers.expressmakers.com/#transaction-create
      *
-     * @param  int  $amount  the amount you desire to receive
-     * @param  string  $domain  the domain name you have ordered
-     * @param  string  $success_callback  the url that user should get redirected into when transaction payed successfully
-     * @param  string  $failure_callback  the url that user should get redirected into when transaction did not payed successfully
+     * @param int    $amount           the amount you desire to receive
+     * @param string $domain           the domain name you have ordered
+     * @param string $success_callback the url that user should get redirected into when transaction payed successfully
+     * @param string $failure_callback the url that user should get redirected into when transaction did not payed successfully
      *
      * @throws TokenNotSetException
      *
@@ -139,7 +138,7 @@ class ExpressMakers
      *
      * @see https://developers.expressmakers.com/#transaction
      *
-     * @param  string  $transaction_id  id of the transaction
+     * @param string $transaction_id id of the transaction
      *
      * @throws TokenNotSetException
      *
