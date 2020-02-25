@@ -7,7 +7,7 @@
 # expressmakers-php
 ExpressMakers PHP Library (with laravel support)
 
-please read our [documentation](https://developers.expressmakers.com) for usage.
+please read our [documentation](https://developer.expressmakers.com) for usage.
 
 ---
 
