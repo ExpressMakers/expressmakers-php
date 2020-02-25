@@ -22,13 +22,13 @@ namespace ExpressMakers\API\Responses;
 class GetOrdersResponse extends BaseResponse
 {
     /**
-     * Get Orders.
+     * Get Data.
      *
      * array of all orders
      *
      * @return array
      */
-    public function getOrders(): array
+    public function getData(): array
     {
         return $this->_data->data;
     }

@@ -48,9 +48,9 @@ after installing with composer you can simply initiate a new instance of express
 
 
 ```php
-$pm = new Expressmakers\API\ExpressMakers($token);
+$em = new Expressmakers\API\ExpressMakers($token);
 // use the method you want, ex:
-var_dump($pm->checkCredit()->getData());
+var_dump($em->checkCredit()->getData());
 ```
 
 ## Laravel Usage
@@ -60,14 +60,14 @@ you can use dependency injection feature in any method of your controller or res
 using dependency injection:
 ```php
 Route::get('/', function (\Expressmakers\API\ExpressMakers $pm) {
-    dd($pm->checkCredit()->getData());
+    dd($pm->getOrders()->getData());
 });
 ```
 
 using service container:
 ```php
-$pm = resolve('ExpressMakers\\API\\ExpressMakers');
-dd($pm->checkCredit()->getData());
+$em = resolve('ExpressMakers\\API\\ExpressMakers');
+dd($em->getOrders()->getData());
 ```
 
 ## Dependencies
