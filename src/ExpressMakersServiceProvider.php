@@ -16,7 +16,8 @@ class ExpressMakersServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/expressmakers.php', 'expressmakers'
+            __DIR__.'/config/expressmakers.php',
+            'expressmakers'
         );
         $this->app->bind('ExpressMakers\API\ExpressMakers', function () {
             return new ExpressMakers(config('expressmakers.token'));
