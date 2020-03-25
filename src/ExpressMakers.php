@@ -144,7 +144,7 @@ class ExpressMakers
      *
      * @return GetTransactionResponse
      */
-    public function renewOrder(string $transaction_id): GetTransactionResponse
+    public function getTransaction(string $transaction_id): GetTransactionResponse
     {
         return new GetTransactionResponse($this->_call('GET', "transactions/{$transaction_id}"));
     }
