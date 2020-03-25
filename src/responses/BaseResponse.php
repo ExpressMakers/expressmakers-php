@@ -23,7 +23,7 @@ class BaseResponse
 
         try {
             $this->_responseObject = jdecode($response->getBody()->getContents());
-            $this->_data = $this->_responseObject->data;
+            $this->_data = $this->_responseObject;
         } catch (Exception $exception) {
             $this->_data = $response->getBody()->getContents();
         }
