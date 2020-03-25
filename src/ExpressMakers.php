@@ -125,8 +125,11 @@ class ExpressMakers
      */
     public function createTransaction(int $amount, string $domain, string $success_callback, string $failure_callback)
     {
-        return new CreateTransactionResponse($this->_call('POST', 'transactions',
-            compact('amount', 'domain', 'success_callback', 'failure_callback')));
+        return new CreateTransactionResponse($this->_call(
+            'POST',
+            'transactions',
+            compact('amount', 'domain', 'success_callback', 'failure_callback')
+        ));
     }
 
     /**
